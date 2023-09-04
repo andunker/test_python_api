@@ -1,4 +1,4 @@
-boto3
-python-dotenv
-Flask[async]
-jsonpickle
+boto3==1.28.40
+python-dotenv==1.0.0
+Flask[async]==2.3.3
+jsonpickle==3.0.2
