@@ -1,5 +1,5 @@
-from app.model.item import Item
-from app.service.interface.item_interface import IItemService
+from src.model.item import Item
+from src.service.interface.item_interface import IItemService
 
 
 class ItemService(IItemService):

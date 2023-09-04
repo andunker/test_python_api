@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from app.model.item import Item
+from src.model.item import Item
 
 
 class IItemService(ABC):

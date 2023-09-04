@@ -1,5 +1,5 @@
-from app.model.item import Item
-from app.service.item_service import ItemService
+from src.model.item import Item
+from src.service.item_service import ItemService
 
 
 class ItemController:
