@@ -18,8 +18,8 @@ class ItemService(IItemService):
     def get_items(self) -> list:
         return self.items
 
-    def get_item(self, item_id) -> Item | None:
-        item: Item = next(
+    def get_item(self, item_id) -> dict | None:
+        item = next(
             (item for item in self.items if item["id"] == item_id), None)
         if item:
             return item

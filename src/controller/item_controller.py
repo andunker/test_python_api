@@ -10,5 +10,5 @@ class ItemController:
     def get_items(self) -> list:
         return self.item_service.get_items()
 
-    def get_item(self, item_id) -> Item | None:
+    def get_item(self, item_id) -> dict | None:
         return self.item_service.get_item(item_id)

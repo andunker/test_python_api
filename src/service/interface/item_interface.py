@@ -10,5 +10,5 @@ class IItemService(ABC):
         pass
 
     @abstractmethod
-    def get_item(self, item_id) -> Item | None:
+    def get_item(self, item_id) -> dict | None:
         pass
