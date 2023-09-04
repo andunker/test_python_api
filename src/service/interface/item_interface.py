@@ -6,7 +6,7 @@ from src.model.item import Item
 class IItemService(ABC):
 
     @abstractmethod
-    def get_items(self) -> list:
+    def get_items(self) -> list[Item]:
         pass
 
     @abstractmethod

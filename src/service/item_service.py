@@ -12,16 +12,12 @@ class ItemService(IItemService):
         fourth_item: Item = Item.from_dict(
             {"id": 4, "name": "Item 4", "description": "Description for Item 4"})
 
-        self.items = [first_item.to_dict(), second_item.to_dict(),
-                      third_item.to_dict(), fourth_item.to_dict()]
+        self.items = [first_item, second_item,
+                      third_item, fourth_item]
 
-    def get_items(self) -> list:
+    def get_items(self) -> list[Item]:
         return self.items
 
-    def get_item(self, item_id) -> dict | None:
-        item = next(
-            (item for item in self.items if item["id"] == item_id), None)
-        if item:
-            return item
-        else:
-            return None
+    def get_item(self, item_id) -> Item | None:
+        item = next((item for item in self.items if item.id == item_id), None)
+        return item

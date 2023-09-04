@@ -7,8 +7,8 @@ class ItemController:
     def __init__(self):
         self.item_service: ItemService = ItemService()
 
-    def get_items(self) -> list:
+    def get_items(self) -> list[Item]:
         return self.item_service.get_items()
 
-    def get_item(self, item_id) -> dict | None:
+    def get_item(self, item_id) -> Item | None:
         return self.item_service.get_item(item_id)

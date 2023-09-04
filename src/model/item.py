@@ -1,4 +1,6 @@
-class Item:
+from src.model.base_model import BaseModel
+
+class Item(BaseModel):
 
     def __init__(self, id, name, description):
         self.id: int = id
