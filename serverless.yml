@@ -24,9 +24,13 @@ provider:
   name: aws
   runtime: python3.11
 plugins:
- - serverless-wsgi
- - serverless-python-requirements
+  - serverless-wsgi
+  - serverless-add-api-key
+  - serverless-python-requirements
 custom:
+ apiKeys:
+  - name: myApiKey
+    value: #put your apikey
  wsgi:
    app: app.app
    packRequirements: false
@@ -37,9 +41,11 @@ functions:
      - http:
         path: /items
         method: get
+        private: true
      - http:
         path: /items/{id}
         method: get
+        private: true
 
 # you can overwrite defaults here
 #  stage: dev
