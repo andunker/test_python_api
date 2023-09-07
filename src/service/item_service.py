@@ -15,9 +15,9 @@ class ItemService(IItemService):
         self.items = [first_item, second_item,
                       third_item, fourth_item]
 
-    def get_items(self) -> list[Item]:
+    async def get_items(self) -> list[Item]:
         return self.items
 
-    def get_item(self, item_id) -> Item | None:
+    async def get_item(self, item_id) -> Item | None:
         item = next((item for item in self.items if item.id == item_id), None)
         return item
